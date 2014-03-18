@@ -10,7 +10,7 @@ describe 'TodoListController', ->
 
   beforeEach ->
     inject ($rootScope, $controller, $injector, TaskList) =>
-      @TaskList = TaskList     
+      @TaskList = TaskList
       spyOn(@TaskList.prototype, 'find').andReturn({name: "Your list", tasks: [{description: 'Task 1'}]})
       @scope = $rootScope.$new()
       @ctrl  = $controller "TodoListController", $scope: @scope, TaskList: @TaskList, Task: Task

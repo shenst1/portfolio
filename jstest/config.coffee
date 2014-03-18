@@ -1,5 +1,6 @@
 # Karma configuration
 # Generated on Sun Aug 25 2013 12:31:34 GMT+0200 (CEST)
+# After installing node, run karma start jstest/config.coffee
 
 module.exports = (config) ->
   config.set
