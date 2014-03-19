@@ -1,5 +1,5 @@
 Todo::Application.routes.draw do
-  devise_for :users  
+  devise_for :users
 
   namespace :api, defaults: {format: :json} do
     devise_scope :user do
@@ -15,4 +15,5 @@ Todo::Application.routes.draw do
   get '/dashboard' => 'templates#index'
   get '/task_lists/:id' => 'templates#index'
   get '/templates/:path.html' => 'templates#template', :constraints => { :path => /.+/  }
+  get '/settings' => 'templates#index'
 end

@@ -6,9 +6,11 @@ h3 Technologies used
 
   .panel-body
     p Most analytics services offer strong tools for robust statistical analysis, but these 'out-of-the-box' solutions - built for a wide array of product verticals - can't capture the peculiarities of a specific product/business. Furthermore, they're producing 'flat'/objective information with a focus on digestible presentation and easy integration. Lasertooth takes it a step further by helping product teams build tailored metrics dashboards that significantly reduce 'first-pass' problem diagnosis,  and free up resources to drive product improvement.
-
-
-
+#testimonies
+  - Twitter.favorites("railscasts", count: 3).each do |tweet|
+    blockquote= tweet.text
+    .from
+      | \&mdash; @#{tweet.user.screen_name}
 .panel.panel-default
   .panel-heading
    h3.panel-title Service

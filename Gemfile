@@ -15,6 +15,8 @@ gem 'slim'
 gem 'active_model_serializers'
 gem 'jquery-ui-rails'
 gem 'acts_as_list'
+gem 'twitter'
+gem 'omniauth'
 
 group :doc do
   gem 'sdoc', require: false
