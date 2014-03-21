@@ -1,10 +1,11 @@
+
 <%require "twitter"
 
 client = Twitter::REST::Client.new do |config|
-  config.consumer_key        = "0g52aLxcSy8O2YWjJ12dQ"
-  config.consumer_secret     = "BFOjonGmzBTQFJGsl76Yj8SzQ08RR3aj7iZyiYQFQiY"
-  config.access_token        = "176554524-RSFRZdk15Q3BnyTBfLLTYMJvD4QWHSduWG0okgOa"
-  config.access_token_secret = "E72edSlBDzVMQb4ySNyjydsCyCUOSGbHp5DwumwwzYzKS"
+  config.consumer_key        = TWITTER_CONFIG['consumer_key']
+  config.consumer_secret     = TWITTER_CONFIG['consumer_secret']
+  config.access_token        = TWITTER_CONFIG['access_token']
+  config.access_token_secret = TWITTER_CONFIG['access_token_secret']
 end%>
 
 <div id="testimonies">
@@ -12,4 +13,5 @@ end%>
    <blockquote><%= tweet.text %></blockquote>
    <div class="from">&mdash; @<%= tweet.user.screen_name %></div>
  <% end %>
+ <%= client.user.screen_name %>
 </div>
