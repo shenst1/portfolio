@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   devise :token_authenticatable, :database_authenticatable, :registerable,
-    :recoverable, :rememberable, :trackable, :validatable
+    :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   has_many :task_lists, foreign_key: :owner_id
 
@@ -17,7 +17,32 @@ class User < ActiveRecord::Base
   def first_list
     task_lists.first
   end
+
+  # def self.from_omniauth(auth)
+  #   where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
+  # end
+
+
+
   def self.from_omniauth(auth)
-    where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
+    user = where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
+    user.twitter_oauth_token = auth["credentials"]["token"]
+    user.twitter_oauth_secret = auth["credentials"]["secret"]
+    user.save!
+    user
+  end
+
+  def self.create_from_omniauth(auth)
+    create! do |user|
+      user.provider = auth["provider"]
+      user.uid = auth["uid"]
+      user.name = auth["info"]["nickname"]
+    end
+  end
+
+  def twitter
+    if provider == "twitter"
+      @twitter ||= Twitter::Client.new(oauth_token: twitter_oauth_token, oauth_token_secret: twitter_oauth_secret)
+    end
   end
 end

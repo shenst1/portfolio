@@ -1,17 +1,10 @@
 
-<%require "twitter"
 
-client = Twitter::REST::Client.new do |config|
-  config.consumer_key        = TWITTER_CONFIG['consumer_key']
-  config.consumer_secret     = TWITTER_CONFIG['consumer_secret']
-  config.access_token        = TWITTER_CONFIG['access_token']
-  config.access_token_secret = TWITTER_CONFIG['access_token_secret']
-end%>
 
 <div id="testimonies">
- <% client.favorites("railscasts", count: 3).each do |tweet| %>
+ <% @client.favorites("railscasts", count: 3).each do |tweet| %>
    <blockquote><%= tweet.text %></blockquote>
    <div class="from">&mdash; @<%= tweet.user.screen_name %></div>
  <% end %>
- <%= client.user.screen_name %>
+ <%= @client.user.screen_name %>
 </div>

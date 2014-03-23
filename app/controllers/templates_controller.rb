@@ -9,5 +9,7 @@ class TemplatesController < ApplicationController
     render :template => 'templates/' + params[:path], :layout => nil
   end
 
+  protected
+
 
 end

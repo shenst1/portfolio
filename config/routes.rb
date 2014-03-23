@@ -1,5 +1,6 @@
 Todo::Application.routes.draw do
   devise_for :users
+  get 'auth/:provider/callback' => 'sessions#create'
 
   namespace :api, defaults: {format: :json} do
     devise_scope :user do
