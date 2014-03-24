@@ -5,7 +5,6 @@ class Api::SessionsController < Devise::SessionsController
     sign_in(resource_name, resource)
     resource.reset_authentication_token!
     render json: {auth_token: resource.authentication_token}
-    user = User.from_omniauth(env['omniauth.auth'])
   end
 
   def destroy

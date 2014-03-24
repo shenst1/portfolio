@@ -18,12 +18,6 @@ class User < ActiveRecord::Base
     task_lists.first
   end
 
-  # def self.from_omniauth(auth)
-  #   where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
-  # end
-
-
-
   def self.from_omniauth(auth)
     user = where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
     user.twitter_oauth_token = auth["credentials"]["token"]
