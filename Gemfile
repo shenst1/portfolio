@@ -19,6 +19,8 @@ gem 'twitter', :git => 'https://github.com/sferik/twitter.git'
 #authorization
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'square'
+gem 'omniauth-facebook'
 
 group :doc do
   gem 'sdoc', require: false

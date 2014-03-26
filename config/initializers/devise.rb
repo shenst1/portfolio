@@ -227,8 +227,12 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
   TWITTER_CONFIG = YAML.load_file("#{::Rails.root}/config/twitter.yml")[::Rails.env]
+  # SQUARE_CONFIG = YAML.load_file("#{::Rails.root}/config/square.yml")[::Rails.env]
+  FACEBOOK_CONFIG = YAML.load_file("#{::Rails.root}/config/facebook.yml")[::Rails.env]
 
   config.omniauth :twitter, TWITTER_CONFIG['consumer_key'], TWITTER_CONFIG['consumer_secret']
+  config.omniauth :facebook, FACEBOOK_CONFIG['facebook_id'], FACEBOOK_CONFIG['facebook_secret']
+  # config.omniauth :square, SQUARE_CONFIG['square_id'], SQUARE_CONFIG['square_secret']
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

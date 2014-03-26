@@ -1,0 +1,12 @@
+development:
+  facebook_id: 735195183192032
+  facebook_secret: 3881d9a4b08c8b33e1d0d65902daa048
+
+production:
+  facebook_id: 735195183192032
+  facebook_secret: 3881d9a4b08c8b33e1d0d65902daa048
+
+test:
+  facebook_id: 735195183192032
+  facebook_secret: 3881d9a4b08c8b33e1d0d65902daa048
+

@@ -19,11 +19,20 @@ class User < ActiveRecord::Base
   end
 
   def self.from_omniauth(auth)
-    user = where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
-    user.twitter_oauth_token = auth["credentials"]["token"]
-    user.twitter_oauth_secret = auth["credentials"]["secret"]
-    user.save!
-    user
+    # user = where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
+    # user.twitter_oauth_token = auth["credentials"]["token"]
+    # user.twitter_oauth_secret = auth["credentials"]["secret"]
+    # user.save!
+    # user
+    where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.name = auth.info.name
+      user.twitter_oauth_token = auth.credentials.token
+      user.email = auth.info.email
+      # user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+      user.save!
+    end
   end
 
   def self.create_from_omniauth(auth)
