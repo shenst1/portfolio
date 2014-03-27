@@ -2,6 +2,8 @@
   ul.nav.nav-pills.pull-right
     - if user_signed_in?
       li
+        = current_user.name
+      li
         = link_to "Settings", settings_path
       li
         = link_to "Log out", destroy_user_session_path, method: :delete

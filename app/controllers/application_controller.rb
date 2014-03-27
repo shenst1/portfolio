@@ -4,4 +4,6 @@ class ApplicationController < ActionController::Base
   def permission_denied
     render file: "public/401.html", layout: false, status: :unauthorized
   end
+
+
 end

@@ -40,6 +40,8 @@ class User < ActiveRecord::Base
       user.provider = auth["provider"]
       user.uid = auth["uid"]
       user.name = auth["info"]["nickname"]
+      user.twitter_oauth_token = auth.credentials.token
+      user.email = auth.info.email
     end
   end
 

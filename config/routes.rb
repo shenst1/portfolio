@@ -1,5 +1,12 @@
 Todo::Application.routes.draw do
-  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+  resources :twitter_accounts
+
+  #service routes
+
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" } do
+    get '/users/auth/twitter/callback' => 'service_callbacks#twitter'
+  end
+
 
   namespace :api, defaults: {format: :json} do
     devise_scope :user do
@@ -16,4 +23,6 @@ Todo::Application.routes.draw do
   get '/task_lists/:id' => 'templates#index'
   get '/templates/:path.html' => 'templates#template', :constraints => { :path => /.+/  }
   get '/settings' => 'templates#index'
+
+
 end

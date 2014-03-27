@@ -230,7 +230,6 @@ Devise.setup do |config|
   # SQUARE_CONFIG = YAML.load_file("#{::Rails.root}/config/square.yml")[::Rails.env]
   FACEBOOK_CONFIG = YAML.load_file("#{::Rails.root}/config/facebook.yml")[::Rails.env]
 
-  config.omniauth :twitter, TWITTER_CONFIG['consumer_key'], TWITTER_CONFIG['consumer_secret']
   config.omniauth :facebook, FACEBOOK_CONFIG['facebook_id'], FACEBOOK_CONFIG['facebook_secret']
   # config.omniauth :square, SQUARE_CONFIG['square_id'], SQUARE_CONFIG['square_secret']
 
