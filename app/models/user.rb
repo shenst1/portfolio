@@ -44,10 +44,4 @@ class User < ActiveRecord::Base
       user.email = auth.info.email
     end
   end
-
-  def twitter
-    if provider == "twitter"
-      @twitter ||= Twitter::Client.new(oauth_token: twitter_oauth_token, oauth_token_secret: twitter_oauth_secret)
-    end
-  end
 end

@@ -11,8 +11,6 @@
       li(class=active_if_current(root_path))
         = link_to "Home", root_path
       li
-        = link_to "Authorize Twitter", user_omniauth_authorize_path(:twitter)
-      li
         = link_to "Authorize Facebook", user_omniauth_authorize_path(:facebook)
       li(class=active_if_current(new_user_registration_path))
         = link_to "Sign up", new_user_registration_path
