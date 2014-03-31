@@ -1,3 +1,4 @@
+
 class TwitterAccount < ActiveRecord::Base
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |account|
@@ -22,7 +23,7 @@ class TwitterAccount < ActiveRecord::Base
     end
   end
 
-  def twitter
+  def instantiate_twitter
     if provider == "twitter"
       @twitter ||= Twitter::Client.new(oauth_token: twitter_oauth_token, oauth_token_secret: twitter_oauth_secret)
     end

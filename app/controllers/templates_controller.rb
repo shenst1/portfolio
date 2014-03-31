@@ -1,5 +1,7 @@
 class TemplatesController < ApplicationController
+  include Twitter
   before_filter :authenticate_user!
+
 
   def index
 
@@ -8,8 +10,6 @@ class TemplatesController < ApplicationController
   def template
     render :template => 'templates/' + params[:path], :layout => nil
   end
-
-  protected
 
 
 end

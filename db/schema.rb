@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140327221511) do
+ActiveRecord::Schema.define(version: 20140331223014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "facebook_accounts", force: true do |t|
+    t.string   "oauth_token"
+    t.string   "oauth_secret"
+    t.string   "uid"
+    t.string   "user"
+    t.string   "provider"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "task_lists", force: true do |t|
     t.integer  "owner_id"
@@ -52,6 +63,13 @@ ActiveRecord::Schema.define(version: 20140327221511) do
     t.string   "provider"
     t.string   "uid"
     t.string   "name"
+  end
+
+  create_table "twitter_data", force: true do |t|
+    t.string   "tweet"
+    t.string   "favorites"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

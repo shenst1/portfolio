@@ -1,4 +1,6 @@
 Todo::Application.routes.draw do
+  resources :facebook_accounts
+
   resources :twitter_accounts
 
   #service routes

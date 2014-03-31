@@ -1,8 +1,1 @@
 
-<div id="testimonies">
- <% @client.favorites("railscasts", count: 3).each do |tweet| %>
-   <blockquote><%= tweet.text %></blockquote>
-   <div class="from">&mdash; @<%= tweet.user.screen_name %></div>
- <% end %>
- <%= @client.user.screen_name %>
-</div>
