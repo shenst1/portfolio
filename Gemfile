@@ -21,6 +21,7 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'square'
 gem 'omniauth-facebook'
+gem 'figaro'
 
 group :doc do
   gem 'sdoc', require: false

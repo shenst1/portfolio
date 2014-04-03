@@ -19,3 +19,6 @@
 /config/twitter.yml
 /config/square.yml
 /config/facebook.yml
+
+# Ignore application configuration
+/config/application.yml
