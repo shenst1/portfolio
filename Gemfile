@@ -29,7 +29,10 @@ end
 
 group :production do
   gem 'shelly-dependencies'
+  # heroku gem
+  gem 'rails_12factor'
 end
+
 
 group :test do
   gem 'rspec-rails'
