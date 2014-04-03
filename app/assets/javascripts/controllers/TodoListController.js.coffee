@@ -1,4 +1,4 @@
-angular.module('todoApp').controller "TodoListController", ($scope, $timeout, $routeParams, Task, TaskList) ->
+angular.module('lasertoothApp').controller "TodoListController", ($scope, $timeout, $routeParams, Task, TaskList) ->
   $scope.sortMethod = 'priority'
   $scope.sortableEnabled = true
 

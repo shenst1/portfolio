@@ -25,6 +25,7 @@ Todo::Application.routes.draw do
   get '/task_lists/:id' => 'templates#index'
   get '/templates/:path.html' => 'templates#template', :constraints => { :path => /.+/  }
   get '/settings' => 'templates#index'
+  get '/reports' => 'templates#index'
 
 
 end
