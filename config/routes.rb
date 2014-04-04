@@ -26,6 +26,7 @@ Todo::Application.routes.draw do
   get '/templates/:path.html' => 'templates#template', :constraints => { :path => /.+/  }
   get '/settings' => 'templates#index'
   get '/reports' => 'templates#index'
+  get '/welcome' => 'templates#index'
 
 
 end

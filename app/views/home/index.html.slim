@@ -1,57 +1,19 @@
-h3 Technologies used
-
-.panel.panel-default
-  .panel-heading
-    h3.panel-title Mission
-
-  .panel-body
-    p Most analytics services offer strong tools for robust statistical analysis, but these 'out-of-the-box' solutions - built for a wide array of product verticals - can't capture the peculiarities of a specific product/business. Furthermore, they're producing 'flat'/objective information with a focus on digestible presentation and easy integration. Lasertooth takes it a step further by helping product teams build tailored metrics dashboards that significantly reduce 'first-pass' problem diagnosis,  and free up resources to drive product improvement.
-#testimonies
-  - Twitter.favorites("railscasts", count: 3).each do |tweet|
-    blockquote= tweet.text
-    .from
-      | \&mdash; @#{tweet.user.screen_name}
-.panel.panel-default
-  .panel-heading
-   h3.panel-title Service
-
-  .panel-body
-    ul
-      li= link_to "Google analytics API", "https://developers.google.com/analytics/"
-      li= link_to "Facebook API", "https://github.com/nov/fb_graph"
-      li= link_to "Mailchimp API", "http://rubygems.org/gems/mailchimp"
-
-h3 API
-
-p Log in with email and password using HTTP Basic Auth. Auth token will be returned that should be used in all consecutive requests.
-pre curl #{request.url}api/session -d '' -u EMAIL:PASSWORD
-
-p List all task lists of a user.
-pre curl #{request.url}api/task_lists?auth_token=TOKEN
-
-p Create a new list
-pre curl #{request.url}api/task_lists?auth_token=TOKEN -d '{"list": {"name": "New List from API"}}' -H 'Content-Type: application/json'
-
-p Update given list
-pre curl #{request.url}api/task_lists/TASK_LIST_ID?auth_token=TOKEN -d '{"list": {"name": "New name from API"}}' -H 'Content-Type: application/json' -X PATCH
-
-p Remove given list
-pre curl #{request.url}api/task_lists/TASK_LIST_ID?auth_token=TOKEN -X DELETE
-
-p List all tasks in a given list.
-pre curl #{request.url}api/task_lists/TASK_LIST_ID/tasks?auth_token=TOKEN
-
-p Create a new task in a given list.
-pre curl #{request.url}api/task_lists/TASK_LIST_ID/tasks?auth_token=TOKEN -d '{"task": {"description": "Task from API"}}' -H 'Content-Type: application/json'
-
-p Update given task.
-pre curl #{request.url}api/task_lists/TASK_LIST_ID/tasks/TASK_ID?auth_token=TOKEN -d '{"task": {"description": "New description from API"}}' -H 'Content-Type: application/json' -X PATCH
-
-p Remove given task.
-pre curl #{request.url}api/task_lists/TASK_LIST_ID/tasks/TASK_ID?auth_token=TOKEN -X DELETE
-
-p Log out. After this action, given auth token will no longer be valid.
-pre curl #{request.url}api/session?auth_token=TOKEN -X DELETE
-
-a(href="https://github.com/mkwiatkowski/todo-rails4-angularjs" id="github-ribbon")
-  img(alt="Fork me on GitHub" id="github-ribbon" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" style="position: absolute; top: 0; left: 0; border: 0;")
+h1.welcome Lasertooth
+p Square businesses are social businesses.
+p At Lasertooth, we believe your transactions are correlated to your social profile. Using Square's powerful API and extensive, we help you make better business decisions by drawing insights from your social data and customer transactions.
+form
+  input type="email"
+li.profile.row
+  .large-3.columns
+    = image_tag("WEB_AndrewHead.png")
+  .large-9.columns
+    p.name Madison Walker,
+    p.subheader.title Senior Designer
+    p.bio With 11 years experience in the salon industry, including 8 years at the prestigious Gene Juarez, Madison is a true expert . After building a dedicated clientele, Madison felt the entrepreneur call to build her own vision of the ideal salon experience. Madison is a hair design specialist. She is highly involved with the Seattle community, running the wig fitting department at the Seattle Cancer Care Alliance and is also an active member of the Post Alley Project.
+li.profile.row
+  .large-3.columns
+    = image_tag("WEB_AndrewHead.png")
+  .large-9.columns
+    p.name Madison Walker,
+    p.subheader.title Senior Designer
+    p.bio With 11 years experience in the salon industry, including 8 years at the prestigious Gene Juarez, Madison is a true expert . After building a dedicated clientele, Madison felt the entrepreneur call to build her own vision of the ideal salon experience. Madison is a hair design specialist. She is highly involved with the Seattle community, running the wig fitting department at the Seattle Cancer Care Alliance and is also an active member of the Post Alley Project.
