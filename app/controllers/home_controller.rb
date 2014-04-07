@@ -3,5 +3,7 @@ class HomeController < ApplicationController
     if user_signed_in?
       redirect_to welcome_path
     end
+    @betauser = Betauser.new
   end
+
 end
