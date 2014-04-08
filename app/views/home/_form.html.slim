@@ -1,7 +1,7 @@
 = form_for(@betauser, :url => {action: "create", controller: "betausers"},  role: "form", html: {class: "form-horizontal welcome-form row"}) do |f|
   .form-group
     .col-sm-6.col-sm-offset-4
-      = f.email_field :email, :autofocus => true, :class => "form-control", :placeholder => "Sign up to receive future updates"
+      = f.email_field :email, :class => "form-control", :placeholder => "Sign up to receive future updates"
     .col-sm-1
       = f.submit "Alert Me", :class => "btn btn-default"
 / = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
