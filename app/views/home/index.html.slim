@@ -1,10 +1,11 @@
-.col-sm-4
-  = image_tag("lasertoothlogo.png")
-  small
-.col-sm-7.col-sm-offset-1
-  h1 Depth to Square.
-  h3
-    small.lead Square users rejoice; Lasertooth connects your social media activity to revenue growth! We are a highly secure analytics layer built on your Square service, adding financial insight and correlating it with key social data.
+.row
+  .col-sm-4
+    = image_tag("lasertoothlogo.png", class: "logo")
+    small
+  header.col-sm-7.col-sm-offset-1
+    h1 Depth to Square.
+    h3
+      small.lead Square users rejoice; Lasertooth connects your social media activity to revenue growth! We are a highly secure analytics layer built on your Square service, adding financial insight and correlating it with key social data.
 
 = render "home/form"
 .row.panel
@@ -19,7 +20,7 @@
         small  Design and Analytics
         = link_to image_tag("linkedin.png"), "http://www.linkedin.com/in/marklaughery/"
         small.email  mwlaugh@gmail.com
-      li  Masters student at UW’s Human-Centered Design and Engineering Data
+      li  Masters student at UW’s Human-Centered Design and Engineering
       li  Product Analyst: Byte Distillery, RealNetworks, AudienceScience
       li  Python (pandas), Axure, CS6, SQL
   .row.bio
