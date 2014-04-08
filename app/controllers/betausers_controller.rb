@@ -1,7 +1,7 @@
  class BetausersController < ApplicationController
   def create
     @betauser = Betauser.create!(safe_params)
-    flash[:notice] = 'Thanks for signing up!'
+    flash[:notice] = 'Boom. Thank you!'
     redirect_to root_path
 
   end
