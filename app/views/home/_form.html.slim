@@ -1,6 +1,6 @@
 = form_for(@betauser, :url => {action: "create", controller: "betausers"},  role: "form", html: {class: "form-horizontal welcome-form row"}) do |f|
   .form-group
-    .col-sm-5.col-sm-offset-5
+    .col-sm-6.col-sm-offset-4
       = f.email_field :email, :autofocus => true, :class => "form-control", :placeholder => "Sign up to receive future updates"
     .col-sm-1
       = f.submit "Alert Me", :class => "btn btn-default"
