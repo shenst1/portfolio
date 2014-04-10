@@ -1,8 +1,9 @@
 Todo::Application.routes.draw do
   resources :betausers
   resources :facebook_accounts
-
   resources :twitter_accounts
+
+  mount Blogit::Engine => "/blog"
 
   #service routes
 

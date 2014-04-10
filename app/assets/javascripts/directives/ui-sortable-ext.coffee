@@ -1,5 +1,5 @@
 # Disables/enables uiSortable depending on value of boolean attribute.
-angular.module('lasertoothApp').directive 'uiSortableExt', ->
+angular.module('jdconsultingApp').directive 'uiSortableExt', ->
   restrict: 'A'
   link: (scope, element, attrs) ->
     toggleSortable = ->

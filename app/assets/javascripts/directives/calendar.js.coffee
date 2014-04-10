@@ -1,4 +1,4 @@
-angular.module('lasertoothApp').directive 'calendar', ->
+angular.module('jdconsultingApp').directive 'calendar', ->
   restrict: 'E'
   transclude: true
   replace: true

@@ -1,6 +1,6 @@
 # directive for inputs
 # it sets required=true and handles white-space values
-angular.module('lasertoothApp').directive 'nonBlank', ->
+angular.module('jdconsultingApp').directive 'nonBlank', ->
   restrict: 'A'
   link: (scope, input, attrs) ->
     input[0].required = true

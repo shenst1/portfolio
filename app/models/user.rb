@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
     :recoverable, :rememberable, :trackable, :omniauthable
 
   has_many :task_lists, foreign_key: :owner_id
+  blogs
 
   after_create :create_task_list
 

@@ -5,5 +5,5 @@
 //= require turbolinks
 //= require lib/angular.min
 //= require lib/angular-resource.min
-//= require lasertoothApp
+//= require jdconsultingApp
 //= require_tree .

@@ -6,7 +6,7 @@ describe 'TodoListController', ->
     delete: (_) ->
 
   beforeEach ->
-    module('lasertoothApp')
+    module('jdconsultingApp')
 
   beforeEach ->
     inject ($rootScope, $controller, $injector, TaskList) =>

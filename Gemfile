@@ -15,6 +15,8 @@ gem 'slim'
 gem 'active_model_serializers'
 gem 'jquery-ui-rails'
 gem 'acts_as_list'
+#blog
+gem "acts-as-taggable-on", github: "mbleigh/acts-as-taggable-on"
 gem 'twitter', :git => 'https://github.com/sferik/twitter.git'
 #authorization
 gem 'omniauth'
@@ -27,6 +29,9 @@ gem 'newrelic_rpm'
 group :doc do
   gem 'sdoc', require: false
 end
+gem 'blogit',
+  :git => 'https://github.com/KatanaCode/blogit.git',
+  :branch => 'rails4'
 
 group :production do
   gem 'shelly-dependencies'

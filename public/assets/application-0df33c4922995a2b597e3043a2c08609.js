@@ -15778,17 +15778,17 @@ arguments.length+" arguments.";}var n=this instanceof g?this:a.isArray?[]:new g(
 arguments.length+" arguments.";}g[b].call(this,m,e?this:w,j,i)}});g.bind=function(d){return u(b,o({},e,d),a)};return g}var A={get:{method:"GET"},save:{method:"POST"},query:{method:"GET",isArray:!0},remove:{method:"DELETE"},"delete":{method:"DELETE"}},p=d.noop,h=d.forEach,o=d.extend,v=d.copy,r=d.isFunction;t.prototype={url:function(b){var e=this,a=this.template,f,g,b=b||{};h(this.urlParams,function(h,c){f=b.hasOwnProperty(c)?b[c]:e.defaults[c];d.isDefined(f)&&f!==null?(g=s(f,!0).replace(/%26/gi,"&").replace(/%3D/gi,
 "=").replace(/%2B/gi,"+"),a=a.replace(RegExp(":"+c+"(\\W)","g"),g+"$1")):a=a.replace(RegExp("(/?):"+c+"(\\W)","g"),function(a,b,c){return c.charAt(0)=="/"?c:b+c})});var a=a.replace(/\/?#$/,""),k=[];h(b,function(a,b){e.urlParams[b]||k.push(s(b)+"="+s(a))});k.sort();a=a.replace(/\/*$/,"");return a+(k.length?"?"+k.join("&"):"")}};return u}])})(window,window.angular);
 (function() {
-  var lasertoothApp;
+  var jdconsultingApp;
 
-  lasertoothApp = angular.module('lasertoothApp', ['ngResource', 'mk.editablespan', 'ui.sortable']);
+  jdconsultingApp = angular.module('jdconsultingApp', ['ngResource', 'mk.editablespan', 'ui.sortable']);
 
-  lasertoothApp.config(function($httpProvider) {
+  jdconsultingApp.config(function($httpProvider) {
     var authToken;
     authToken = $("meta[name=\"csrf-token\"]").attr("content");
     return $httpProvider.defaults.headers.common["X-CSRF-TOKEN"] = authToken;
   });
 
-  lasertoothApp.config(function($routeProvider, $locationProvider) {
+  jdconsultingApp.config(function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $routeProvider.when('/', {
       redirectTo: '/dashboard'
@@ -15825,7 +15825,7 @@ arguments.length+" arguments.";}g[b].call(this,m,e?this:w,j,i)}});g.bind=functio
 
 }).call(this);
 (function() {
-  angular.module('lasertoothApp').controller("DashboardController", function($scope, $routeParams, $location, TaskList) {
+  angular.module('jdconsultingApp').controller("DashboardController", function($scope, $routeParams, $location, TaskList) {
     var serverErrorHandler;
     $scope.init = function() {
       this.listsService = new TaskList(serverErrorHandler);
@@ -15861,7 +15861,7 @@ arguments.length+" arguments.";}g[b].call(this,m,e?this:w,j,i)}});g.bind=functio
 
 }).call(this);
 (function() {
-  angular.module('lasertoothApp').controller("TodoListController", function($scope, $timeout, $routeParams, Task, TaskList) {
+  angular.module('jdconsultingApp').controller("TodoListController", function($scope, $timeout, $routeParams, Task, TaskList) {
     var lowerPrioritiesBelow, raisePriorities, serverErrorHandler, tasksBelow, updatePriorities;
     $scope.sortMethod = 'priority';
     $scope.sortableEnabled = true;
@@ -15962,7 +15962,7 @@ arguments.length+" arguments.";}g[b].call(this,m,e?this:w,j,i)}});g.bind=functio
 
 }).call(this);
 (function() {
-  angular.module('lasertoothApp').directive('calendar', function() {
+  angular.module('jdconsultingApp').directive('calendar', function() {
     return {
       restrict: 'E',
       transclude: true,
@@ -16011,7 +16011,7 @@ arguments.length+" arguments.";}g[b].call(this,m,e?this:w,j,i)}});g.bind=functio
 
 }).call(this);
 (function() {
-  angular.module('lasertoothApp').directive('nonBlank', function() {
+  angular.module('jdconsultingApp').directive('nonBlank', function() {
     return {
       restrict: 'A',
       link: function(scope, input, attrs) {
@@ -16031,7 +16031,7 @@ arguments.length+" arguments.";}g[b].call(this,m,e?this:w,j,i)}});g.bind=functio
 
 }).call(this);
 (function() {
-  angular.module('lasertoothApp').directive('uiSortableExt', function() {
+  angular.module('jdconsultingApp').directive('uiSortableExt', function() {
     return {
       restrict: 'A',
       link: function(scope, element, attrs) {
@@ -16176,7 +16176,7 @@ angular.module('ui.sortable', [])
       }
 ]);
 (function() {
-  angular.module('lasertoothApp').factory('TaskList', function($resource, $http) {
+  angular.module('jdconsultingApp').factory('TaskList', function($resource, $http) {
     var TaskList;
     return TaskList = (function() {
       function TaskList(errorHandler) {
@@ -16244,7 +16244,7 @@ angular.module('ui.sortable', [])
 
 }).call(this);
 (function() {
-  angular.module('lasertoothApp').factory('Task', function($resource, $http) {
+  angular.module('jdconsultingApp').factory('Task', function($resource, $http) {
     var Task;
     return Task = (function() {
       function Task(taskListId, errorHandler) {

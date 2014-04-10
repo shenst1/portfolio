@@ -1,42 +1,34 @@
 .row
   .col-sm-4
-    = image_tag("lasertoothlogo.png", class: "logo")
+    = image_tag("jdparenting-logo.png", class: "logo")
     small
-  header.col-sm-8
-    h1 Depth to Square.
+  header.col-sm-7.col-sm-offset-1
+    h1 Knowledge and skills that make parenting and family life work.
     h3
-      small.lead Square users rejoice; Lasertooth connects your social media activity to revenue growth! We are a highly secure analytics layer built on your Square service, adding financial insight and correlating it with key social data.
+      small.lead
+        |  Jeff Drake has been working with parents and families for 25 years providing the latest research and understanding of the needs of children, the art of parenting and the best practices for successful family life.
+    h3
+      small.lead
+        |  He has worked with children in preschool, elementary and high school and has three grown children of his own.
+    ul.list-inline
+      li Talks
+      li Contact
+      li Blog
 
-= render "home/form"
+/ = render "home/form"
 .row.panel
   .row.bio
-    .col-sm-2.col-sm-offset-4
-      = image_tag("WEB_MarkHead.png", class: "headshot")
-    .col-sm-6.bio-text
-      h2
-        |
-        small Mark Laughery
+    .col-sm-2.col-sm-offset-5
+      = image_tag("Jeff's-Profile-Photo.png", class: "headshot")
+    .col-sm-5.bio-text
       h3.social
-        small  Design & Analytics
-        = link_to image_tag("linkedin.png"), "http://www.linkedin.com/in/marklaughery/"
+        small
+        = link_to image_tag("linkedin.png"), "http://www.linkedin.com/in/jeffdrake/"
         small.email mwlaugh@gmail.com
       li  Masters student at UW’s Human-Centered Design and Engineering
       li  Product Analyst: Byte Distillery, RealNetworks, AudienceScience
       li  Python (pandas), Axure, CS6, SQL
-  .row.bio
-    .col-sm-2.col-sm-offset-4
-      = image_tag("WEB_AndrewHead.png", class: "headshot")
-    .col-sm-6.bio-text
-      h2
-        |
-        small Andrew Shenstone
-      h3.social
-        small  Developer
-        = link_to image_tag("linkedin.png"), "http://www.linkedin.com/in/ashenstone/"
-        small.email shenst1@gmail.com
-      li  Microsoft, Zooppa, Burnt District, Wine Couture
-      li  Ruby on Rails, Angular.js
-      li  Graduate of Codefellows
+
 
 
 

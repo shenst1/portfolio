@@ -1,4 +1,4 @@
-angular.module('lasertoothApp').factory 'TaskList', ($resource, $http) ->
+angular.module('jdconsultingApp').factory 'TaskList', ($resource, $http) ->
   class TaskList
     constructor: (errorHandler) ->
       @service = $resource('/api/task_lists/:id',
