@@ -1,6 +1,6 @@
 .row
   .col-sm-4
-    = image_tag("jdparenting-logo.png", class: "logo")
+    = link_to image_tag("jdparenting-logo.png", class: "logo"), "/"
     small
     .ng-cloak
       div(ng-view)
@@ -20,7 +20,7 @@
     a.btn.btn-default href="/consulting" role="button"  Consulting
     a.btn.btn-default href="/contact" role="button"  Contact
     a.btn.btn-default href="/blog" role="button" target="self"  Blog
-    .bio
+    .bio.row
       .col-sm-4
         = image_tag("Jeff's-Profile-Photo.png", class: "headshot")
       .col-sm-8.bio-text
