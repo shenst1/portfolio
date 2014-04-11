@@ -1,10 +1,9 @@
 class TemplatesController < ApplicationController
   include Twitter
-  before_filter :authenticate_user!
+  # before_filter :authenticate_user!
 
 
   def index
-
   end
 
   def template

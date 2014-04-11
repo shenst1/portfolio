@@ -6,9 +6,9 @@ jdconsultingApp.config ($httpProvider) ->
 
 jdconsultingApp.config ($routeProvider, $locationProvider) ->
   $locationProvider.html5Mode true
-  $routeProvider.when '/', redirectTo: '/dashboard'
   $routeProvider.when '/dashboard', templateUrl: '/templates/dashboard.html', controller: 'DashboardController'
   $routeProvider.when '/task_lists/:list_id', templateUrl: '/templates/task_list.html', controller: 'TodoListController'
+  $routeProvider.when '/talks', templateUrl: '/templates/talks'
   $routeProvider.when '/settings', templateUrl: '/templates/settings.html', controller: 'SettingsController'
   $routeProvider.when '/reports', templateUrl: '/templates/reports.html', controller: 'ReportsController'
   $routeProvider.when '/welcome', templateUrl: '/templates/welcome.html', controller: 'WelcomeController'
