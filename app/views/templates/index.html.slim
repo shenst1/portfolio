@@ -1,6 +1,10 @@
-menu.share Share
-.row
-  section.col-sm-4
+header
+  a.btn.btn-share href="/blog" role="button" target="self"
+    = image_tag("share.png")
+    | Share
+
+#profile-container.row
+  section#profile-basic.col-sm-4
     .profile
       h2 Andrew Shenstone
       .col-sm-4
@@ -8,11 +12,15 @@ menu.share Share
       .col-sm-8
         .role Web Developer
         .location
-          i.icon-search
-
+          = image_tag("location.png")
+          | Seattle, WA
     .contact
-      a.btn.btn-default href="/blog" role="button" target="self"  Blog
-      a.btn.btn-default href="/contact" role="button"  Contact
+      a.btn.btn-default href="/blog" role="button" target="self"
+        = image_tag("quill.png")
+        | Blog
+      a.btn.btn-default href="/contact" role="button"
+        = image_tag("envelope.png")
+        | Message
     .focus
       p Web Development, Angular.js, Ruby on Rails
     .about
@@ -22,26 +30,14 @@ menu.share Share
       li LinkedIn
       li Github
       li Twitter
-  section.col-sm-8
+  section#profile-content.col-sm-8
     menu
-      a.btn.btn-default.active href="/projects" role="button"  Projects
-      a.btn.btn-default href="/technology" role="button"  Technology
+      a.btn.btn-main-menu href="/projects" role="button"  Projects
+      a.btn.btn-main-menu href="/technology" role="button"  Technology
     main
-      .col-sm-3.project-card
-        = link_to image_tag("protfolio-icon.png", class: "project-thumbnail"), "/"
-        .title LaserTooth
-        .role Developer
-        .tags Angular.js Rails
-      .col-sm-3.project-card
-        = link_to image_tag("protfolio-icon.png", class: "project-thumbnail"), "/"
-        .title LaserTooth
-        .role Developer
-        .tags Angular.js Rails
-      .col-sm-3.project-card
-        = link_to image_tag("protfolio-icon.png", class: "project-thumbnail"), "/"
-        .title LaserTooth
-        .role Developer
-        .tags Angular.js Rails
+      .ng-cloak
+        div(ng-view)
+
 
 
 

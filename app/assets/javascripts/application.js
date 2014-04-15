@@ -3,6 +3,7 @@
 //= require jquery.ui.datepicker
 //= require jquery.ui.sortable
 //= require turbolinks
+//= require bootstrap
 //= require lib/angular.min
 //= require lib/angular-resource.min
 //= require portfolioApp
