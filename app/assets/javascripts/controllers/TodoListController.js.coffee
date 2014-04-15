@@ -1,4 +1,4 @@
-angular.module('jdconsultingApp').controller "TodoListController", ($scope, $timeout, $routeParams, Task, TaskList) ->
+angular.module('portfolioApp').controller "TodoListController", ($scope, $timeout, $routeParams, Task, TaskList) ->
   $scope.sortMethod = 'priority'
   $scope.sortableEnabled = true
 

@@ -1,5 +1,5 @@
 # Disables/enables uiSortable depending on value of boolean attribute.
-angular.module('jdconsultingApp').directive 'uiSortableExt', ->
+angular.module('portfolioApp').directive 'uiSortableExt', ->
   restrict: 'A'
   link: (scope, element, attrs) ->
     toggleSortable = ->

@@ -1,4 +1,4 @@
-angular.module('jdconsultingApp').controller "DashboardController", ($scope, $routeParams, $location, TaskList) ->
+angular.module('portfolioApp').controller "DashboardController", ($scope, $routeParams, $location, TaskList) ->
 
   $scope.init = ->
     @listsService = new TaskList(serverErrorHandler)

@@ -1,25 +1,48 @@
+menu.share Share
 .row
-  .col-sm-4
-    = link_to image_tag("jdparenting-logo.png", class: "logo"), "/"
-    small
-    .ng-cloak
-      div.view-animate(ng-view)
-  header.col-sm-7.col-sm-offset-1
-    h1 Knowledge and skills that make parenting and family life work.
-    h3
-      small.lead
-        |  Jeff Drake has been working with parents and families for 25 years providing the latest research and understanding of the needs of children, the art of parenting and the best practices for successful family life.
-    h3
-      small.lead
-        |  He has worked with children in preschool, elementary and high school and has three grown children of his own.
-    a.btn.btn-default href="/talks" role="button"  Talks
-    a.btn.btn-default href="/consulting" role="button"  Consulting
-    a.btn.btn-default href="/contact" role="button"  Contact
-    a.btn.btn-default href="/blog" role="button" target="self"  Blog
-    .bio.row
+  section.col-sm-4
+    .profile
+      h2 Andrew Shenstone
       .col-sm-4
-        = image_tag("Jeff's-Profile-Photo.png", class: "headshot")
-      ul.col-sm-8.bio-text
-        li  19 years Successful Parenting director
-        li  Parent Educator at Monadnok Family Services
-        li  Skills and Dynamics of Therapeautic Relationships, Muscular Therapy Institue
+        = link_to image_tag("WEB_AndrewHead.png", class: "profile-img"), "/"
+      .col-sm-8
+        .role Web Developer
+        .location
+          i.icon-search
+
+    .contact
+      a.btn.btn-default href="/blog" role="button" target="self"  Blog
+      a.btn.btn-default href="/contact" role="button"  Contact
+    .focus
+      p Web Development, Angular.js, Ruby on Rails
+    .about
+      p Gime me your JSON object and I will make it pretty.
+      p Some quirky statement about myself no more than this long to fill the right amount of space.
+    .web_references
+      li LinkedIn
+      li Github
+      li Twitter
+  section.col-sm-8
+    menu
+      a.btn.btn-default.active href="/projects" role="button"  Projects
+      a.btn.btn-default href="/technology" role="button"  Technology
+    main
+      .col-sm-3.project-card
+        = link_to image_tag("protfolio-icon.png", class: "project-thumbnail"), "/"
+        .title LaserTooth
+        .role Developer
+        .tags Angular.js Rails
+      .col-sm-3.project-card
+        = link_to image_tag("protfolio-icon.png", class: "project-thumbnail"), "/"
+        .title LaserTooth
+        .role Developer
+        .tags Angular.js Rails
+      .col-sm-3.project-card
+        = link_to image_tag("protfolio-icon.png", class: "project-thumbnail"), "/"
+        .title LaserTooth
+        .role Developer
+        .tags Angular.js Rails
+
+
+
+
