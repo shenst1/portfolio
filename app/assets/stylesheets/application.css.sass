@@ -2,11 +2,10 @@
 //= require_self
 //= require_tree .
 
-
-
-@iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png')
-@iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png')
 @import "bootstrap"
+
+.nav, .pagination, .carousel, .panel-title a
+  cursor: pointer
 body
   padding-top: 1em
   padding-bottom: 20px
@@ -28,21 +27,37 @@ body
   margin-top: 17px
   overflow: hidden
 #profile-basic
+  padding: 0px
 
 #profile-content
   // box-shadow: inset -5px 0 5px -5px rgba(0,0,0,0.25)
   box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4)
   height: 100%
   padding: 0px
+header
+  padding-bottom: 1em
+  text-align: right
 main
   padding-top: 1em
   min-height: 800px
   padding-right: 42px
+aside
+  border-bottom: 1px solid #e8e8e8
+  padding: 1.5em
+.icon
+  opacity: .5
+  padding-right: 8px
+  padding-bottom: 2px
+  width: 20px
+.icon-link
+  opacity: .5
+  margin: 1em 1em 1em 0em
 
 ul
   list-style-type: none
 h1, h2
   text-align: left
+  font-weight: 200
 h1
   color: #222
   text-transform: uppercase
@@ -52,9 +67,19 @@ h1
   margin-bottom: 21px
   font-family: 'Gotham A', 'Gotham B', sans-serif
   font-size: 21px
+h3
+  color: #222
+  text-transform: uppercase
+  font-weight: 500
+  letter-spacing: 1px
+  margin-top: 0
+  margin-bottom: 1em
+  font-family: 'Gotham A', 'Gotham B', sans-serif
+  font-size: 1em
 img.profile-img
   width: 100px
   height: 100px
+  margin-left: -16px
 img.project-thumbnail
   width: 201px
   height: 158px
@@ -62,8 +87,19 @@ img.project-thumbnail
   -webkit-transition: opacity 0.15s linear
   -moz-transition: opacity 0.15s linear
   transition: opacity 0.15s linear
+.profile
+  padding: 1.5em
+.role
+  padding-top: 1em
+  font-weight: 600
 .contact
   clear: both
+  padding-top: 1em
+  a
+    margin-right: 2em
+    min-width: 140px
+  .message
+    background-color: rgba(46, 204, 113, .2)
 menu
   border-bottom: 1px solid lightgray
   text-align: center
@@ -81,6 +117,8 @@ menu
   color: rgb(111, 111, 111)
   &:hover
     border-bottom: 1px solid rgba(43, 43, 43, 1)
+.btn-share
+  min-width: 140px
 
 .talks
   padding-left: 0px

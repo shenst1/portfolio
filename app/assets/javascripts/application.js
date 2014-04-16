@@ -6,5 +6,6 @@
 //= require bootstrap
 //= require lib/angular.min
 //= require lib/angular-resource.min
+//= require lib/ui-bootstrap-tpls-0.10.0.min
 //= require portfolioApp
 //= require_tree .

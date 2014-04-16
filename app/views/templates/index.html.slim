@@ -1,8 +1,8 @@
-header
-  a.btn.btn-share href="/blog" role="button" target="self"
-    = image_tag("share.png")
-    | Share
 
+header.row
+    button.btn.btn-default.btn-share role="button" tooltip-html-unsafe=("Facebook</br>, Twitter, Email") tooltip-placement="bottom"
+      = image_tag("share.png", class: "icon")
+      | Share
 #profile-container.row
   section#profile-basic.col-sm-4
     .profile
@@ -12,24 +12,27 @@ header
       .col-sm-8
         .role Web Developer
         .location
-          = image_tag("location.png")
+          = image_tag("location.png", class: "icon")
           | Seattle, WA
-    .contact
+    aside.contact ng-controller="MessageController"
       a.btn.btn-default href="/blog" role="button" target="self"
-        = image_tag("quill.png")
+        = image_tag("quill.png", class: "icon")
         | Blog
-      a.btn.btn-default href="/contact" role="button"
-        = image_tag("envelope.png")
+      a.btn.btn-default href="#" role="button" class="message" ng-click="open()"
+        = image_tag("envelope.png", class: "icon")
         | Message
-    .focus
+    aside.focus
+      h3  Focus
       p Web Development, Angular.js, Ruby on Rails
-    .about
-      p Gime me your JSON object and I will make it pretty.
+    aside.about
+      h3  About
+      p Give me your JSON object and I will make it pretty.
       p Some quirky statement about myself no more than this long to fill the right amount of space.
-    .web_references
-      li LinkedIn
-      li Github
-      li Twitter
+    aside.web_references
+      h3  Web References
+      = link_to image_tag('linkedin.png', class: "icon-link"), "http://www.linkedin.com/in/ashenstone"
+      = link_to image_tag('github.png', class: "icon-link"), "http://www.github.com/shenst1"
+      = link_to image_tag('twitter.png', class: "icon-link"), "http://www.twitter.com/shenst1"
   section#profile-content.col-sm-8
     menu
       a.btn.btn-main-menu href="/projects" role="button"  Projects
