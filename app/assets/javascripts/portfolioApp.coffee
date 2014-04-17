@@ -9,7 +9,7 @@ portfolioApp.config ($routeProvider, $locationProvider) ->
   $routeProvider.when '/', redirectTo: '/projects'
   $routeProvider.when '/dashboard', templateUrl: '/templates/dashboard.html', controller: 'DashboardController'
   $routeProvider.when '/projects', templateUrl: '/templates/projects.html', controller: 'ProjectsCtrl'
-  $routeProvider.when '/projects/:list_id', templateUrl: '/templates/project.html', controller: 'ProjectController'
+  $routeProvider.when '/projects/:list_id', templateUrl: '/templates/project.html', controller: 'ProjectsCtrl'
   $routeProvider.when '/technology', templateUrl: '/templates/technology.html'
   $routeProvider.when '/about', templateUrl: '/templates/about.html'
   $routeProvider.when '/contact', templateUrl: '/templates/contact.html'

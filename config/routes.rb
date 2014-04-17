@@ -1,4 +1,6 @@
 Todo::Application.routes.draw do
+  resources :projects
+
   resources :betausers
   resources :facebook_accounts
   resources :twitter_accounts
@@ -28,6 +30,7 @@ Todo::Application.routes.draw do
   get '/about' => 'templates#index'
   get '/contact' => 'templates#index'
   get '/blog' => 'templates#index'
+  get 'projects/edit' => 'templates#index'
 
 
 end
