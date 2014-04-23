@@ -1,36 +1,37 @@
-= render "templates/projects_admin"
-
-ul.thumbnails
-  li.col-sm-4
-    .thumbnail.project-card
-      a href="#"
-        img.project-thumbnail src="assets/protfolio-icon.png" ng-click="open()"
-      a href="#"
-        .title ng-click="open()" LaserTooth
-      .role Developer
-      .tags Angular.js Rails
-  li.col-sm-4
-    .thumbnail.project-card
-      = link_to image_tag("protfolio-icon.png", class: "project-thumbnail"), "/"
-      .title LaserTooth
-      .role Developer
-      .tags Angular.js Rails
-  li.col-sm-4
-    .thumbnail.project-card
-      = link_to image_tag("protfolio-icon.png", class: "project-thumbnail"), "/"
-      .title LaserTooth
-      .role Developer
-      .tags Angular.js Rails
-  li.col-sm-4
-    .thumbnail.project-card
-      = link_to image_tag("protfolio-icon.png", class: "project-thumbnail"), "/"
-      .title LaserTooth
-      .role Developer
-      .tags Angular.js Rails
-  li.col-sm-4
-    .thumbnail.project-card
-      = link_to image_tag("protfolio-icon.png", class: "project-thumbnail"), "/"
-      .title LaserTooth
-      .role Developer
-      .tags Angular.js Rails
+/ - if user_signed_in?
+.ng-cloak(ng-init="init()")
+  = render "templates/projects_admin"
+  ul.thumbnails
+    li.col-sm-4
+      .thumbnail.project-card
+        a href="#"
+          img.project-thumbnail src="assets/protfolio-icon.png" ng-click="open()"
+        a href="#"
+          .title ng-click="open()" LaserTooth
+        .role Developer
+        .tags Angular.js Rails
+    li.col-sm-4
+      .thumbnail.project-card
+        = link_to image_tag("protfolio-icon.png", class: "project-thumbnail"), "/"
+        .title LaserTooth
+        .role Developer
+        .tags Angular.js Rails
+    li.col-sm-4
+      .thumbnail.project-card
+        = link_to image_tag("protfolio-icon.png", class: "project-thumbnail"), "/"
+        .title LaserTooth
+        .role Developer
+        .tags Angular.js Rails
+    li.col-sm-4
+      .thumbnail.project-card
+        = link_to image_tag("protfolio-icon.png", class: "project-thumbnail"), "/"
+        .title LaserTooth
+        .role Developer
+        .tags Angular.js Rails
+    li.col-sm-4
+      .thumbnail.project-card
+        = link_to image_tag("protfolio-icon.png", class: "project-thumbnail"), "/"
+        .title LaserTooth
+        .role Developer
+        .tags Angular.js Rails
 

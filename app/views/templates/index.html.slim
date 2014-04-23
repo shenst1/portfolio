@@ -34,9 +34,14 @@ header.row
       = link_to image_tag('github.png', class: "icon-link"), "http://www.github.com/shenst1"
       = link_to image_tag('twitter.png', class: "icon-link"), "http://www.twitter.com/shenst1"
   section#profile-content.col-sm-8
-    menu
-      a.btn.btn-main-menu href="/projects" role="button"  Projects
-      a.btn.btn-main-menu href="/technology" role="button"  Technology
+    menu.tabs ng-init="selected=1"
+      a.btn.btn-main-menu href="/projects" rel="projects" ng-click="selected=1" ng-class="{'active' : selected==1}" Projects
+      a.btn.btn-main-menu href="/technology" rel="technology" ng-click="selected=2" ng-class="{'active' : selected==2}" Technology
+
+
+    / menu
+    /   a.btn.btn-main-menu href="/projects" role="button"  Projects
+    /   a.btn.btn-main-menu href="/technology" role="button"  Technology
     main
       .ng-cloak
         div(ng-view)

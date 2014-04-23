@@ -1,16 +1,16 @@
-class ProjectsController < ApplicationController
-  respond_to :json
+class Api::ProjectsController < Api::BaseController
 
   def index
-    render :json => Project.all
+    render json: Project.all
   end
 
   def show
-    respond_with Project.find(params[:id])
+    render json: project
   end
 
   def create
-    render :json => Project.create!(safe_params)
+    project = projects.create!(safe_params)
+    render json: project
   end
 
   def update
@@ -25,7 +25,11 @@ class ProjectsController < ApplicationController
   private
 
   def safe_params
-    params.require(:project).permit(:title, :about, :url, :tools, :feedback)
+    params.require(:project).permit(:title, :about, :url, :image_url, :tools, :feedback)
   end
+  def project
+    @project ||= Project.find(params[:id])
+  end
+
 end
 

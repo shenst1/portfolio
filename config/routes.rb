@@ -1,6 +1,4 @@
 Todo::Application.routes.draw do
-  resources :projects
-
   resources :betausers
   resources :facebook_accounts
   resources :twitter_accounts
@@ -21,6 +19,7 @@ Todo::Application.routes.draw do
     resources :task_lists, only: [:index, :create, :update, :destroy, :show] do
       resources :tasks, only: [:index, :create, :update, :destroy]
     end
+    resources :projects, only: [:index, :create, :update, :destroy, :show]
   end
 
   root :to => "templates#index"
@@ -30,7 +29,4 @@ Todo::Application.routes.draw do
   get '/about' => 'templates#index'
   get '/contact' => 'templates#index'
   get '/blog' => 'templates#index'
-  get 'projects/edit' => 'templates#index'
-
-
 end
