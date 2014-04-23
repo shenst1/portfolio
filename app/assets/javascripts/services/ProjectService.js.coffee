@@ -11,8 +11,9 @@ angular.module('portfolioApp').factory 'Project', ($resource, $http) ->
       defaults.patch = defaults.patch || {}
       defaults.patch['Content-Type'] = 'application/json'
 
-    create: (attrs, successHandler) ->
-      new @service(project: attrs).$save ((project) -> successHandler(project)), @errorHandler
+    create: (attrs) ->
+      new @service(project: attrs).$save ((project) -> attrs.id = project.id), @errorHandler
+      attrs
 
     delete: (project) ->
       new @service().$delete {id: project.id}, (-> null), @errorHandler

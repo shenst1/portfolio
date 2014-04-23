@@ -1,11 +1,11 @@
 angular.module('portfolioApp').controller "ProjectsCtrl", ($scope, $modal, $location, $routeParams, Project) ->
   $scope.init = ->
     @projectService = new Project(serverErrorHandler)
-    # $scope.projects = Project.query()
+    $scope.projects = @projectService.all()
 
   $scope.createProject = ->
-    project = @projectService.create(title: $scope.newProject.title)
-    # $scope.projects.push(project)
+    project = @projectService.create($scope.newProject)
+    $scope.projects.unshift(project)
     $scope.newProject = {}
 
     #to do app way

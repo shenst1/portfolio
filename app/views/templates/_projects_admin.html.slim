@@ -7,7 +7,13 @@
     input#projectAbout.form-control.input-lg type="text" autofocus="autofocus" placeholder="About" maxlength="255" ng-model="newProject.about"
     input#projectFeedback.form-control.input-lg type="text" autofocus="autofocus" placeholder="Feedback" maxlength="255" ng-model="newProject.feedback"
     input type="submit" value="Add" ng-click="createProject()"
-ul
-  li ng-repeat=("project in projects")
-    | {{project.title}
+  ul
+    li(ng-repeat="project in projects")
+      | {{project.title}}
+      | {{project.url}}
+      | {{project.image_url}}
+      | {{project.tools}}
+      | {{project.about}}
+      | {{project.feedback}}
+
 
