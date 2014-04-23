@@ -1,6 +1,5 @@
-angular.module('portfolioApp').factory 'Project', ["$resource", "$http", ($resource, $http) ->
+angular.module('portfolioApp').factory 'Project', ($resource, $http) ->
   class Project
-
     constructor: (errorHandler) ->
       @service = $resource('/api/projects/:id',
         {id: '@id'},
@@ -29,5 +28,5 @@ angular.module('portfolioApp').factory 'Project', ["$resource", "$http", ($resou
         successHandler?(project)
         project),
        @errorHandler)
-]
+
 

@@ -1,13 +1,27 @@
 angular.module('portfolioApp').controller "ProjectsCtrl", ($scope, $modal, $location, $routeParams, Project) ->
   $scope.init = ->
     @projectService = new Project(serverErrorHandler)
-    $scope.projects = @projectService.all()
+    # $scope.projects = Project.query()
 
-  $scope.createProject = (title) ->
-    @projectService.create title: title, (project) ->
-        $location.url("/projects/#{project.id}")
-    console.log "got past create method"
+  $scope.createProject = ->
+    project = @projectService.create(title: $scope.newProject.title)
+    # $scope.projects.push(project)
+    $scope.newProject = {}
 
+    #to do app way
+    # task = @taskService.create(description: $scope.taskDescription)
+    # task.priority = 1
+    # $scope.list.tasks.unshift(task)
+    # $scope.taskDescription = ""
+
+    #unity way
+    # @unity3dAppCtrl = ["$scope", "Promotion", ($scope, Promotion) ->
+    # $scope.promotions = Promotion.query()
+
+    # $scope.addPromotion = ->
+    #   promotion = Promotion.save($scope.newPromotion)
+    #   $scope.promotions.push(promotion)
+    #   $scope.newPromotion = {}
   # $scope.deleteProject = (project, index) ->
   #   result = confirm "Are you sure you want to remove this project?"
 

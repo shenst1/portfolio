@@ -9,7 +9,7 @@ class Api::ProjectsController < Api::BaseController
   end
 
   def create
-    project = projects.create!(safe_params)
+    project = Project.create!(safe_params)
     render json: project
   end
 
