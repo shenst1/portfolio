@@ -89,6 +89,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    contact_us (0.5.1)
+      rails (>= 4.0.0)
     daemons (1.1.9)
     devise (3.0.4)
       bcrypt-ruby (~> 3.0)
@@ -278,6 +280,7 @@ DEPENDENCIES
   blogit!
   bootstrap-sass
   coffee-rails (~> 4.0.0)
+  contact_us
   devise (~> 3.0.4)
   factory_girl
   figaro

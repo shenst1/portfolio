@@ -1,19 +1,13 @@
-.form ng-submit="createProject()" id="new_project" class="ng-pristine ng-valid"
-  .input-group
-    input#projectTitle.form-control.input-lg type="text" autofocus="autofocus" placeholder="Title" maxlength="255" ng-model="newProject.title"
-    input#projectUrl.form-control.input-lg type="text" autofocus="autofocus" placeholder="URL" maxlength="255" ng-model="newProject.url"
-    input#projectImageURL.form-control.input-lg type="text" autofocus="autofocus" placeholder="Image URL" maxlength="255" ng-model="newProject.image_url"
-    input#projectTools.form-control.input-lg type="text" autofocus="autofocus" placeholder="Tools" maxlength="255" ng-model="newProject.tools"
-    input#projectAbout.form-control.input-lg type="text" autofocus="autofocus" placeholder="About" maxlength="255" ng-model="newProject.about"
-    input#projectFeedback.form-control.input-lg type="text" autofocus="autofocus" placeholder="Feedback" maxlength="255" ng-model="newProject.feedback"
-    input type="submit" value="Add" ng-click="createProject()"
-  ul
-    li(ng-repeat="project in projects")
-      | {{project.title}}
-      | {{project.url}}
-      | {{project.image_url}}
-      | {{project.tools}}
-      | {{project.about}}
-      | {{project.feedback}}
+li.col-sm-4(ng-repeat="project in projects")
+  .thumbnail.project-card
+    a href="#"
+      img.project-thumbnail ng-src="{{project.image_url}}" ng-click="open(project)"
+    a href="#"
+    .title ng-click="open()"
+    | {{project.title}}
+    .role Developer
+    .tags
+    | {{project.tools}}
+
 
 

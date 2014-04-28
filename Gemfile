@@ -27,6 +27,7 @@ gem 'omniauth-facebook'
 gem 'figaro'
 gem 'unicorn'
 gem 'newrelic_rpm'
+gem 'contact_us'
 group :doc do
   gem 'sdoc', require: false
 end

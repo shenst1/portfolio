@@ -1,4 +1,4 @@
-angular.module('portfolioApp').controller "ProjectsCtrl", ($scope, $modal, $location, $routeParams, Project) ->
+angular.module('portfolioApp').controller "ProjectsCtrl", ($scope, $modal, $location, $routeParams, Project, $timeout) ->
   $scope.init = ->
     @projectService = new Project(serverErrorHandler)
     $scope.projects = @projectService.all()
@@ -8,34 +8,23 @@ angular.module('portfolioApp').controller "ProjectsCtrl", ($scope, $modal, $loca
     $scope.projects.unshift(project)
     $scope.newProject = {}
 
-    #to do app way
-    # task = @taskService.create(description: $scope.taskDescription)
-    # task.priority = 1
-    # $scope.list.tasks.unshift(task)
-    # $scope.taskDescription = ""
-
-    #unity way
-    # @unity3dAppCtrl = ["$scope", "Promotion", ($scope, Promotion) ->
-    # $scope.promotions = Promotion.query()
-
-    # $scope.addPromotion = ->
-    #   promotion = Promotion.save($scope.newPromotion)
-    #   $scope.promotions.push(promotion)
-    #   $scope.newPromotion = {}
-  # $scope.deleteProject = (project, index) ->
-  #   result = confirm "Are you sure you want to remove this project?"
-
-  #   if result
-  #     @projectService.delete project
-  #     $scope.projects.splice index, 1
-
   serverErrorHandler = ->
     alert("There was a server error, please reload the page and try again.")
 
-  $scope.open = ->
+  $scope.open = (project) ->
     modalInstance = $modal.open(
       templateUrl: '/templates/project.html'
     )
+  # $http.get("projects/" + $routeParams.projectId + ".json").success (data) ->
+  #   $scope.project = data
+  #   $scope.mainImageUrl = data.images[0]
+  #   return
 
+  $scope.imageurl = ''
+
+  $timeout (->
+    $scope.path = ""
+    return
+  ), 1000
 
 

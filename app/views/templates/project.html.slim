@@ -4,10 +4,24 @@
     =image_tag("protfolio-icon.png")
   .col-sm-4.support
     .about-project
-      h3 About Project
+      h3
+      | {{project.title}}
     .link
       a href="http://www.burntdistrict.com" Burnt District
     .tools Tools Used
     .feedback
       p Great job Andrew
+
+/ li.col-sm-4(ng-repeat="project in projects")
+/   .thumbnail.project-card
+/     a href="#"
+/     img.project-thumbnail src="assets/{{project.image_url}}" ng-click="open()"
+/     a href="#"
+/     .title ng-click="open()"
+/     | {{project.title}}
+/     .role Developer
+/     .tags
+/     | {{project.tools}}
+
+
 
