@@ -1,8 +1,7 @@
-
 header.row
-    button.btn.btn-default.btn-share role="button" tooltip-html-unsafe=("Facebook</br>, Twitter, Email") tooltip-placement="bottom"
-      = image_tag("share.png", class: "icon")
-      | Share
+  button.btn.btn-default.btn-share role="button"
+    = image_tag("share.png", class: "icon")
+    = social_share_button_tag
 #profile-container.row
   section#profile-basic.col-sm-4
     .profile

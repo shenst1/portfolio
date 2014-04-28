@@ -8,4 +8,5 @@
 //= require lib/angular-resource.min
 //= require lib/ui-bootstrap-tpls-0.10.0.min
 //= require portfolioApp
+//= require social-share-button
 //= require_tree .

@@ -21,6 +21,7 @@ angular.module('portfolioApp').controller "ProjectsCtrl", ($scope, $modal, $loca
   #   return
 
   $scope.imageurl = ''
+  $scope.shareHtml = "<p> just a paragraph</p>"
 
   $timeout (->
     $scope.path = ""

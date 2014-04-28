@@ -28,6 +28,7 @@ gem 'figaro'
 gem 'unicorn'
 gem 'newrelic_rpm'
 gem 'contact_us'
+gem 'social-share-button'
 group :doc do
   gem 'sdoc', require: false
 end

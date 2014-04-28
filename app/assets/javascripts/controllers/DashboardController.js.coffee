@@ -14,6 +14,7 @@ angular.module('portfolioApp').controller "DashboardController", ($scope, $route
     if result
       @listsService.delete list
       $scope.lists.splice index, 1
+  $scope.shareHtml = "<p> just a paragraph</p>"
 
   serverErrorHandler = ->
     alert("There was a server error, please reload the page and try again.")
