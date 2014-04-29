@@ -32,9 +32,10 @@ gem 'social-share-button'
 group :doc do
   gem 'sdoc', require: false
 end
-gem 'blogit',
-  :git => 'https://github.com/KatanaCode/blogit.git',
-  :branch => 'rails4'
+gem 'bloggy'
+# gem 'blogit',
+#   :git => 'https://github.com/KatanaCode/blogit.git',
+#   :branch => 'rails4'
 
 group :production do
   gem 'shelly-dependencies'

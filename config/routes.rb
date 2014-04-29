@@ -3,8 +3,6 @@ Todo::Application.routes.draw do
   resources :facebook_accounts
   resources :twitter_accounts
 
-  mount Blogit::Engine => "/blog"
-
   #service routes
 
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" } do
@@ -28,5 +26,5 @@ Todo::Application.routes.draw do
   get '/technology' => 'templates#index'
   get '/about' => 'templates#index'
   get '/contact' => 'templates#index'
-  get '/blog' => 'templates#index'
+  # get '/blog' => 'templates#index'
 end

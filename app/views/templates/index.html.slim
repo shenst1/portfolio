@@ -1,7 +1,10 @@
 header.row
+  - if user_signed_in?
+    = render "layouts/navigation"
+
   button.btn.btn-default.btn-share role="button"
     = image_tag("share.png", class: "icon")
-    / = social_share_button_tag
+    = social_share_button_tag
 #profile-container.row
   section#profile-basic.col-sm-4
     .profile
@@ -13,11 +16,11 @@ header.row
         .location
           = image_tag("location.png", class: "icon")
           | Seattle, WA
-    aside.contact ng-controller="MessageController"
+    aside.contact
       a.btn.btn-default href="/blog" role="button" target="self"
         = image_tag("quill.png", class: "icon")
         | Blog
-      a.btn.btn-default href="#" role="button" class="message" ng-click="open()"
+      a.btn.btn-default href="/contact-us" role="button" class="message" target="self"
         = image_tag("envelope.png", class: "icon")
         | Message
     aside.focus
