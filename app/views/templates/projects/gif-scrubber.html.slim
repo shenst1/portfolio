@@ -1,0 +1,35 @@
+.ng-cloak(ng-init="scrub()")
+  .modal-body.row
+    .col-sm-8.story
+      h3 Gif Scrubber
+      ul
+        li#fox.headspin-wrap
+          img#fox-image.headspin-img imageonload="" src="assets/fox.png"
+      p Scrub your mouse over the image to see the effect.
+    .col-sm-4.support
+      .about-project
+        h3 About Project
+        p jQuery plugin that takes film-strip images and creates a scrubbing effect.
+      .link
+        h3 Status
+        p Demo site in progress
+        p
+          = image_tag('github.png', class: "icon-link")
+          = link_to "http://bit.ly/1hewHzS", "http://bit.ly/1hewHzS"
+      .tools
+        h3 Tools
+        p jQuery, Javascript
+
+/ li.col-sm-4(ng-repeat="project in projects")
+/   .thumbnail.project-card
+/     a href="#"
+/     img.project-thumbnail src="assets/{{project.image_url}}" ng-click="open()"
+/     a href="#"
+/     .title ng-click="open()"
+/     | {{project.title}}
+/     .role Developer
+/     .tags
+/     | {{project.tools}}
+
+
+

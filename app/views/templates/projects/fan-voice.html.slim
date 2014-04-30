@@ -1,0 +1,40 @@
+.modal-body.row
+  .col-sm-8.story
+    h3 Fan Voice
+    = image_tag("fan-voice-story.png", class: "")
+  .col-sm-4.support
+    .about-project
+      h3 About Project
+      p Application for writing tweets on behalf of your favorite fictional characters. Users are authenticated and can then write and schedule tweets for a set of selected twitter accounts. Allows multiple people to write for the same account. Features twitter and facebook APIs, devise user management, Foundation front-end framework. Hosted with Heroku and has SendGrid and NewRelic services.
+    .partners
+      h3 Partners
+      =link_to "Tyler Morgan", "www.linkedin.com/pub/tyler-morgan/53/828/b3a"
+    .link
+      h3 Status
+      p Unmaintained and inactive
+      p
+        |
+        =link_to "http://bit.ly/1m7Z2iU", "http://bit.ly/1m7Z2iU"
+      p
+        = image_tag('github.png', class: "icon-link")
+        =link_to "http://bit.ly/1iynbac", "http://bit.ly/1iynbac"
+    .tools
+      h3 Tools
+      p SASS, Ruby on Rails, Coffeescript, Twitter API, Facebook API, Devise, Foundation
+    / .feedback
+    /   h3 Feedback
+    /   p
+
+/ li.col-sm-4(ng-repeat="project in projects")
+/   .thumbnail.project-card
+/     a href="#"
+/     img.project-thumbnail src="assets/{{project.image_url}}" ng-click="open()"
+/     a href="#"
+/     .title ng-click="open()"
+/     | {{project.title}}
+/     .role Developer
+/     .tags
+/     | {{project.tools}}
+
+
+

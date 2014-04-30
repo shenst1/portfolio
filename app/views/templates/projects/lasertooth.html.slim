@@ -1,0 +1,38 @@
+.modal-body.row
+  .col-sm-8.story
+    h3 Lasertooth
+    = image_tag("lasertooth-story.png", class: "")
+  .col-sm-4.support
+    .about-project
+      h3 About Project
+      p Lasertooth connects your social media activity to revenue growth. Analytics layer built on the Square service, adding financial insight and correlating it with key social data.
+    .partners
+      h3 Partners
+      p
+        = link_to "Mark Laughery", "www.linkedin.com/in/marklaughery"
+    .link
+      h3 Status
+      p Work in Progress
+      p
+        = link_to "http://bit.ly/QZbF1r", "http://bit.ly/QZbF1r"
+      p
+        = image_tag('github.png', class: "icon-link")
+        | Private
+    .tools
+      h3 Tools
+      p SASS, Ruby on Rails, Coffeescript, HTML5, Bootstrap, Devise, Twitter API, Facebook API, Square API
+
+
+/ li.col-sm-4(ng-repeat="project in projects")
+/   .thumbnail.project-card
+/     a href="#"
+/     img.project-thumbnail src="assets/{{project.image_url}}" ng-click="open()"
+/     a href="#"
+/     .title ng-click="open()"
+/     | {{project.title}}
+/     .role Developer
+/     .tags
+/     | {{project.tools}}
+
+
+

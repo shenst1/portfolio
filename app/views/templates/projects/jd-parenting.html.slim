@@ -1,0 +1,37 @@
+.modal-body.row
+  .col-sm-8.story
+    h3 J.D. Parenting
+    p Coming soon...
+  .col-sm-4.support
+    .about-project
+      h3 About Project
+      p Boston area consultant with business for parenting services. Features responsive design, authentication, contact form, Angular front-end to make it a single-page application.
+    .link
+      h3 Status
+      p Work in Progress
+      p
+        |
+        =link_to "http://bit.ly/POyLqE", "http://bit.ly/POyLqE"
+      p
+        = image_tag('github.png', class: "icon-link")
+        =link_to "http://bit.ly/1kpQa4d", "http://bit.ly/1kpQa4d"
+    .tools
+      h3 Tools
+      p SASS, Ruby on Rails, Coffeescript, HTML5, Bootstrap, Angular.js
+    / .feedback
+    /   h3 Feedback
+    /   p
+
+/ li.col-sm-4(ng-repeat="project in projects")
+/   .thumbnail.project-card
+/     a href="#"
+/     img.project-thumbnail src="assets/{{project.image_url}}" ng-click="open()"
+/     a href="#"
+/     .title ng-click="open()"
+/     | {{project.title}}
+/     .role Developer
+/     .tags
+/     | {{project.tools}}
+
+
+

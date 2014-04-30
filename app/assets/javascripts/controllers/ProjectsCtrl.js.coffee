@@ -11,9 +11,11 @@ angular.module('portfolioApp').controller "ProjectsCtrl", ($scope, $modal, $loca
   serverErrorHandler = ->
     alert("There was a server error, please reload the page and try again.")
 
-  $scope.open = (project) ->
+  $scope.open = (templateurl) ->
     modalInstance = $modal.open(
-      templateUrl: '/templates/project.html'
+      templateUrl: templateurl,
+      resolve:
+        headspin: ->
     )
   # $http.get("projects/" + $routeParams.projectId + ".json").success (data) ->
   #   $scope.project = data

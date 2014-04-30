@@ -1,25 +1,25 @@
 .modal-body.row
   .col-sm-8.story
-    h3 Burnt District
+    h3 Lasertooth
     = image_tag("burnt-district-story.png", class: "")
   .col-sm-4.support
     .about-project
       h3 About Project
       p Seattle Salon & Spa located in Pioneer Square. Responsible for design and code. Features custom navigation animation, responsive design, and integration with MindBody 3rd party services.
     .link
-      h3 In the Wild
+      h3 Status
       p
-        |
-        =link_to "http://bit.ly/1m7Z2iU", "http://bit.ly/1m7Z2iU"
+        = image_tag('github.png', class: "icon-link")
+        = link_to "http://bit.ly/1m7Z2iU", "http://bit.ly/1m7Z2iU"
       p
         |
         =link_to "http://bit.ly/1iynbac", "http://bit.ly/1iynbac"
     .tools
       h3 Tools
       p SASS, Ruby on Rails, Coffeescript, HTML5, MindBody, Foundation
-    .feedback
-      h3 Feedback
-      p
+    / .feedback
+    /   h3 Feedback
+    /   p
 
 / li.col-sm-4(ng-repeat="project in projects")
 /   .thumbnail.project-card
